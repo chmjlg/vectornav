@@ -778,6 +778,9 @@ bool fill_imu_message(
       std::copy(user_data->angular_vel_covariance.begin(),
         user_data->angular_vel_covariance.end(),
         msgIMU.angular_velocity_covariance.begin());
+      std::copy(user_data->linear_accel_covariance.begin(),
+        user_data->linear_accel_covariance.end(),
+        msgIMU.linear_acceleration_covariance.begin());
     }
     return true;
   }
